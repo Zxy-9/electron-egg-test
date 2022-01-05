@@ -11,6 +11,7 @@ module.exports = {
   },
   extends: ['plugin:vue/recommended', 'eslint:recommended'],
   rules: {
+	'no-mixed-spaces-and-tabs':0,
     'no-console': 'off',
     "no-unused-vars":"off", //重要 var 变量为引入
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',

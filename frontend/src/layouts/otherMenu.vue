@@ -26,13 +26,13 @@ export default {
       menu: {
         'menu_100' : {
           icon: 'profile',
-          title: '文件',
-          pageName: 'DemoFileIndex',
+          title: 'markdown',
+          pageName: 'otherHome',
           params: {}
         },
         'menu_300' : {
           icon: 'profile',
-          title: '通信',
+          title: '登陆',
           pageName: 'DemoSocketIndex',
           params: {}
         },
@@ -114,13 +114,13 @@ export default {
   created () {
   },
   mounted () {
-    this.menuHandle({key: 'menu_100'})
+   // this.menuHandle({key: 'menu_100'})
   },
   methods: {
-    menuHandle (item) {
+   /* menuHandle (item) {
       const linkInfo = this.menu[item.key]
       this.$router.push({ name: linkInfo.pageName, params: linkInfo.params})
-    }
+    } */
   }
 };
 </script>

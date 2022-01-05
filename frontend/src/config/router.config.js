@@ -3,6 +3,8 @@
  * @type { *[] }
  */
  import {AppSider, DemoMenu} from '@/layouts'
+ import otherMenu from '../layouts/otherMenu.vue'
+ import otherHome from '../views/other/home/index.vue'
 
  const RouteView = {
    name: 'RouteView',
@@ -91,10 +93,21 @@ export const constantRouterMap = [
         ]  
       },
       {
-        path: '/other/index',
+        path: '/other',
         name: 'OtherIndex',
-        component: () => import('@/views/other/Index')
+        component: otherMenu,
+		children: [
+		  {
+		    path: '/other/home/index',
+		    name: 'otherHome',
+		    component: otherHome
+		  }
+		]
       }
-    ]
+    ],
+	
+	
+	
+	
   }
 ]
